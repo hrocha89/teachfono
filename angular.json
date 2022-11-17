@@ -27,6 +27,17 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/primeicons/primeicons.css",
+              {
+                "input": "src/light.css",
+                "bundleName": "light",
+                "inject": false
+              },
+              {
+                "input": "src/dark.css",
+                "bundleName": "dark",
+                "inject": false
+              },
               "src/styles.css"
             ],
             "scripts": []
