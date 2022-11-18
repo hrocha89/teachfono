@@ -27,6 +27,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/primeicons/primeicons.css",
               {
                 "input": "src/light.css",
@@ -112,6 +113,5 @@
         }
       }
     }
-  },
-  "defaultProject": "fonotech"
+  }
 }

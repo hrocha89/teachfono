@@ -9,11 +9,11 @@ export class ThemeService {
   constructor(@Inject(DOCUMENT) private _document: Document) {
   }
 
-  selectTheme(isLigth: boolean) {
+  selectTheme(theme: string) {
     const element = this._document.getElementById('app-theme') as HTMLLinkElement;
 
     if (element) {
-      element.href = isLigth ? 'light' : 'dark' + '.css';
+      element.href = theme + '.css';
     }
   }
 

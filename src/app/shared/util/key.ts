@@ -1,5 +1,5 @@
 export class Key {
-  static readonly USER = 'USER';
-  static readonly PASSWORD = 'PASSWORD';
-  static readonly THEME = 'THEME';
+  static readonly USER: string = 'USER';
+  static readonly PASSWORD: string = 'PASSWORD';
+  static readonly THEME: string = 'THEME';
 }
