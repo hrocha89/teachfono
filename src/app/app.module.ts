@@ -8,6 +8,8 @@ import { UserHeaderModule } from './shared/user-header/user-header.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginModule } from './shared/login/login.module';
 import { AvatarModule } from 'primeng/avatar';
+import { ThemeModule } from './shared/theme/theme.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -21,7 +23,9 @@ import { AvatarModule } from 'primeng/avatar';
     UserHeaderModule,
     BrowserAnimationsModule,
     LoginModule,
-    AvatarModule
+    AvatarModule,
+    ThemeModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

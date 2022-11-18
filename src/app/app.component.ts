@@ -8,8 +8,12 @@ import { Key } from './shared/util/key';
 })
 export class AppComponent implements OnInit {
 
+  label: string = '';
+  year!: number;
 
   ngOnInit(): void {
+    this.label = WebStorageUtil.get(Key.USER).substring(0, 1).toUpperCase();
+    this.year = new Date().getFullYear();
   }
 
   isLogged(): boolean {

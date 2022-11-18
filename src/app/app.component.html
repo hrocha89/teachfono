@@ -1,13 +1,25 @@
-<div class="row">
-  <div class="col-12 ms-auto">
-    <p-avatar image="assets/img/logo.jpeg" styleClass="mr-2" size="xlarge" shape="circle"></p-avatar>
+<div class="container">
+
+  <div class="row mt-3">
+    <div class="col-4">
+      <p-avatar image="assets/img/logo.jpeg" styleClass="mr-2" size="xlarge" shape="circle"></p-avatar>
+    </div>
+    <div class="col-6">
+      <h5>TeachFono</h5>
+    </div>
+    <div class="col-2 ms-auto" *ngIf="isLogged()">
+      <app-header></app-header>
+    </div>
   </div>
+
+  <app-login *ngIf="!isLogged(); else aplicacao"></app-login>
+
+  <ng-template #aplicacao>
+    <app-menu></app-menu>
+    <router-outlet></router-outlet>
+  </ng-template>
+
+  <footer class="fixed-bottom text-center">
+    <div> &copy; {{ year }} Copyright - TeachFono </div>
+  </footer>
 </div>
-
-
-<app-login *ngIf="!isLogged(); else aplicacao"></app-login>
-
-<ng-template #aplicacao>
-  <app-menu></app-menu>
-  <router-outlet></router-outlet>
-</ng-template>

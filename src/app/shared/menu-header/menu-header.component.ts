@@ -10,17 +10,15 @@ import { Key } from '../util/key';
 export class MenuHeaderComponent implements OnInit {
 
   items: MenuItem[] = [];
-  label: string = '';
 
   ngOnInit() {
 
-    this.label = WebStorageUtil.get(Key.USER).substring(0, 1).toUpperCase();
-
     this.items = [
       {label: 'Inicio', icon: PrimeIcons.HOME, routerLink: ['/']},
-      {label: 'Importância dos 4 subsistemas', icon: PrimeIcons.HOME, routerLink: ['/']},
-      {label: 'Subsistemas da linguaguem', icon: PrimeIcons.HOME, routerLink: ['/']},
-      {label: 'Hipóteses de escrita', icon: PrimeIcons.HOME, routerLink: ['/']},
+      {label: 'Importância dos 4 subsistemas', icon: PrimeIcons.SITEMAP, routerLink: ['/pdf']},
+      {label: 'Subsistemas da linguaguem', icon: PrimeIcons.SERVER, routerLink: ['/sub']},
+      {label: 'Hipóteses de escritas', icon: PrimeIcons.QUESTION, routerLink: ['/hipotese']},
+      {label: 'Sobre', icon: PrimeIcons.TABLET, routerLink: ['/sobre']},
       {label: 'Sair', icon: PrimeIcons.POWER_OFF, routerLink: ['/'], command: () => this._logOff()}
     ]
 
